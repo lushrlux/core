@@ -1,18 +1,7 @@
-defmodule Lushrlux do
+defmodule LushrLux.Core do
   @moduledoc """
-  Documentation for `Lushrlux`.
+  LushrLux Core exists such that duplicated code is at a complete minimum.
+  It comprises of functions that are likely to be needed in almost all of the microservice.
+  It should hopefully add a bit of consistency across the services as well.
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Lushrlux.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
