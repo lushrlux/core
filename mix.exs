@@ -6,7 +6,9 @@ defmodule Lushrlux.MixProject do
       app: :lushrlux,
       version: "0.1.0",
       elixir: "~> 1.10",
+      description: "Core utilities for LushrLux",
       start_permanent: Mix.env() == :prod,
+      package: package(),
       deps: deps(),
       aliases: aliases()
     ]
@@ -25,13 +27,23 @@ defmodule Lushrlux.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.1"},
       {:ecto_sql, "~> 3.4"},
-      {:postgrex, "~> 0.15.3"}
+      {:postgrex, "~> 0.15.3"},
+      {:ex_doc, "~> 0.19"}
     ]
   end
 
   defp aliases do
     [
       test: ["test --trace"]
+    ]
+  end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      organizaton: ["LushrLux"],
+      maintainers: ["Tom Nicklin"],
+      links: %{"Github" => "https://github.com/lushrlux/core"}
     ]
   end
 end
